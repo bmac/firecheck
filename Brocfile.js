@@ -69,7 +69,9 @@ module.exports = function (broccoli) {
     'ember.js',
     'ic-ajax/main.js',
     'ember-data.js',
-    'ember-resolver.js'
+    'ember-resolver.js',
+    'firebase.js',
+    'emberfire.js'
   ];
 
   if (env !== 'production') {

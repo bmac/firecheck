@@ -1,4 +1,5 @@
 node_modules
+tmp/
 vendor/FakeXMLHttpRequest/
 vendor/ember-data/
 vendor/ember-qunit/
@@ -10,4 +11,5 @@ vendor/handlebars/
 vendor/ic-ajax/
 vendor/jquery/
 vendor/qunit/
-
+vendor/emberfire/
+vendor/firebase/
