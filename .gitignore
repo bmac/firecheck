@@ -1,0 +1,13 @@
+node_modules
+vendor/FakeXMLHttpRequest/
+vendor/ember-data/
+vendor/ember-qunit/
+vendor/ember-resolver/
+vendor/ember-testing-httpRespond/
+vendor/ember/
+vendor/fakehr/
+vendor/handlebars/
+vendor/ic-ajax/
+vendor/jquery/
+vendor/qunit/
+
