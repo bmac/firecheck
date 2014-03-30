@@ -1,0 +1,10 @@
+<ul>
+{{#each model}}
+  <div class="message">
+    {{time}} &lt;{{nick}}&gt; {{body}}
+  </div>
+{{/each}}
+</ul>
+<form {{action 'sendMessage' msg on='submit'}}>
+  {{input value=msg}}
+</form>
