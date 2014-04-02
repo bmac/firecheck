@@ -1,5 +1,6 @@
 export default Ember.Route.extend({
   model: function(params) {
+    window.room = this.modelFor('room');
     return this.modelFor('room').get('messages');
   },
   actions: {
@@ -14,8 +15,13 @@ export default Ember.Route.extend({
         time: time,
         room: this.modelFor('room')
       });
-      message.save();
-      this.modelFor('room.index').pushObject(message).save();
+      //debugger;
+      message.save().then(function() {
+        var messages = this.modelFor('room.index');
+        messages.addRecord(message);
+        message.save();
+      }.bind(this));
+
       
       var indexController = this.controllerFor('room.index');
       indexController.set('msg', '');
