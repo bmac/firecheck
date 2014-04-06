@@ -8,19 +8,29 @@ export default Ember.Route.extend({
       var appController = this.controllerFor('application');
       var nick = appController.get('nick');
       var time = new Date();
+      var room = this.modelFor('room');
 
       var message = this.store.createRecord('message', {
         body: msg,
         nick: nick,
         time: time,
-        room: this.modelFor('room')
+        //room: room
       });
-      //debugger;
-      message.save().then(function() {
-        var messages = this.modelFor('room.index');
+
+      var messages = room.get('messages')//.then(function(messages) {
         messages.addRecord(message);
-        message.save();
-      }.bind(this));
+        room.save().then(function() {
+          //message.save();
+        });
+      //});
+
+      //debugger;
+      // message.save().then(function() {
+      //   var messages = this.modelFor('room.index');
+      //   messages.addRecord(message);
+      //   message.save();
+      //   room.save();
+      // }.bind(this));
 
       
       var indexController = this.controllerFor('room.index');
