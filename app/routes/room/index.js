@@ -16,6 +16,10 @@ export default Ember.Route.extend({
         time: time,
         //room: room
       });
+      
+      // message.get('room').then(function() {
+        
+      // });
 
       var messages = room.get('messages')//.then(function(messages) {
         messages.addRecord(message);
