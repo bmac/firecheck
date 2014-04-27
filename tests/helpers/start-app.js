@@ -1,5 +1,4 @@
-import Application from 'firecheck/app';
-import Router from 'firecheck/router';
+var Router = require('firecheck/router')['default'];
 
 function startApp(attrs) {
   var App;
@@ -16,7 +15,7 @@ function startApp(attrs) {
   });
 
   Ember.run(function(){
-    App = Application.create(attributes);
+    App = require('firecheck/main')['default']('firecheck', attributes);
     App.setupForTesting();
     App.injectTestHelpers();
   });
