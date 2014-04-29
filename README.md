@@ -1,2 +1,6 @@
 firecheck
 =========
+
+
+#### LICENSE
+MIT
