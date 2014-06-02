@@ -3,9 +3,7 @@ var Router = Ember.Router.extend({
 }); // ensure we don't share routes between all Router instances
 
 Router.map(function() {
-  this.resource('room', {path: 'room/:room_name'}, function() {
-    
-  });
+  this.route('room', {path: 'room/:room_name'});
 });
 
 export default Router;
